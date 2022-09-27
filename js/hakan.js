@@ -42,7 +42,7 @@ function createBox(name, r, hs, ws, w,h,d,color){
     var geometry = new THREE.SphereGeometry(r, hs, ws);
     var material = new THREE.MeshBasicMaterial({color:color});
     var loader = new THREE.TextureLoader();
-    material.map = loader.load("/textures/vahdet.jpeg");
+    material.map = loader.load("https://hakanzn.github.io/kuredunya/textures/vahdet.jpeg");
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(w,h,d);
     mesh.name = name;
