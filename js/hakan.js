@@ -1,6 +1,13 @@
 var scene;
 var camera;
 var renderer;
+var url;
+if(document.URL.search("url=")>0){
+       url = document.URL.split("url=")[1];
+    }
+    else{
+       url= "https://hakanzn.github.io/kuredunya/textures/vahdet.jpeg";
+    }
 function createScene(){
 
     scene = new THREE.Scene();
@@ -42,12 +49,7 @@ function createBox(name, r, hs, ws, w,h,d,color){
     var geometry = new THREE.SphereGeometry(r, hs, ws);
     var material = new THREE.MeshBasicMaterial({color:color});
     var loader = new THREE.TextureLoader();
-    if(document.URL.search("url=")>0){
-       url = document.URL.split("url=")[1];
-    }
-    else{
-       url= "https://hakanzn.github.io/kuredunya/textures/vahdet.jpeg";
-    }
+    
 
     material.map = loader.load(url);
     var mesh = new THREE.Mesh(geometry, material);
