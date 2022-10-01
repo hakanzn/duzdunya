@@ -132,7 +132,7 @@ function createBox(name, r, hs, ws, w,h,d,color, texture, bool, deger){
     var geometry = new THREE.SphereGeometry(r, hs, ws);
     var material = new THREE.MeshStandardMaterial({color:color, transparent:bool, opacity:deger});
     var loader = new THREE.TextureLoader();
-    material.map = loader.load("https://hakanzn.github.io/kuredunya/textures/"+texture+".jpg");
+    material.map = loader.load("https://hakanzn.github.io/duzdunya/textures/"+texture+".jpg");
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(w,h,d);
     
@@ -146,7 +146,7 @@ function createPlane(name, w,h){
     var geometry = new THREE.PlaneGeometry(w,h);
     var material = new THREE.MeshStandardMaterial({color:0xffffff});
     var loader = new THREE.TextureLoader();
-    material.map = loader.load("https://hakanzn.github.io/kuredunya/textures/duz.jpg");
+    material.map = loader.load("https://hakanzn.github.io/duzdunya/textures/duz.jpg");
     var mesh = new THREE.Mesh(geometry, material);
     mesh.position.set(1,1,1);
     mesh.rotation.x = -Math.PI / 2;
@@ -168,7 +168,7 @@ function createSpotLight(){
 
 function milkway(){
     const loader = new THREE.CubeTextureLoader();
-loader.setPath( 'https://hakanzn.github.io/kuredunya/textures/MilkyWay/' );
+loader.setPath( 'https://hakanzn.github.io/duzdunya/textures/MilkyWay/' );
 
 const textureCube = loader.load( [
 	'dark-s_px.jpg', 'dark-s_nx.jpg',
