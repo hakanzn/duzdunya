@@ -8,9 +8,9 @@ function createScene(){
 
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight,1, 10000);
-    camera.position.x = 577;
-    camera.position.y = 234;
-    camera.position.z = 641;
+    camera.position.x = 771;
+    camera.position.y = 449;
+    camera.position.z = 852;
     camera.lookAt(new THREE.Vector3(0,0,0));
 
     //ikinci kamera
@@ -179,7 +179,7 @@ function createPlane(name, w,h){
 }
 
 function createSpotLight(){
-    spotLight = new THREE.PointLight(0xffffff,4,600);
+    spotLight = new THREE.PointLight(0xffffff,4,700);
 
     spotLight.position.set(1,1000,1);
     spotLight.castShadow = true;
