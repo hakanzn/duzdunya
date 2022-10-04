@@ -8,9 +8,9 @@ function createScene(){
 
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(50, window.innerWidth/window.innerHeight,1, 10000);
-    camera.position.x = 1;
-    camera.position.y = 800;
-    camera.position.z = 400;
+    camera.position.x = 577;
+    camera.position.y = 234;
+    camera.position.z = 641;
     camera.lookAt(new THREE.Vector3(0,0,0));
 
     //ikinci kamera
