@@ -179,7 +179,7 @@ function createPlane(name, w,h){
 }
 
 function createSpotLight(){
-    spotLight = new THREE.PointLight(0xffffff,4,700);
+    spotLight = new THREE.PointLight(0xffffff,5,1000);
 
     spotLight.position.set(1,1000,1);
     spotLight.castShadow = true;
@@ -206,12 +206,12 @@ function addGui(){
 	const gui = new dat.GUI();
 
 	const cameraFolder = gui.addFolder('Kamera1');
-	cameraFolder.add(camera2.position, 'z', 0, 500).name("Z Ekseni");
-	cameraFolder.add(camera2.position, 'x', 0, 500).name("X Ekseni");
+	cameraFolder.add(camera2.position, 'z', -500, 500).name("Z Ekseni");
+	cameraFolder.add(camera2.position, 'x', -500, 500).name("X Ekseni");
 	//cameraFolder.open();
 	const cameraFolder2 = gui.addFolder('Kamera2');
-	cameraFolder2.add(camera3.position, 'z', 0, 500).name("Z Ekseni");
-	cameraFolder2.add(camera3.position, 'x', 0, 500).name("X Ekseni");
+	cameraFolder2.add(camera3.position, 'z', -500, 500).name("Z Ekseni");
+	cameraFolder2.add(camera3.position, 'x', -500, 500).name("X Ekseni");
 	//cameraFolder2.open();
 	lightFolder = gui.addFolder("Gunes Isigi");
 	lightFolder.add(spotLight, "intensity", 1, 10).name("Yogunluk");
